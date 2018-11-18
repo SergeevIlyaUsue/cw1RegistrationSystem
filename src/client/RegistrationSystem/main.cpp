@@ -13,7 +13,7 @@ std::string SendGet(const char* url, const char* query);
 
 int main()
 {
-	while (true) // Зациклим выполнение программы
+	while (true) // Р—Р°С†РёРєР»РёРј РІС‹РїРѕР»РЅРµРЅРёРµ РїСЂРѕРіСЂР°РјРјС‹
 	{
 		std::cout << "Enter command, reg or log" << std::endl;
 
@@ -22,7 +22,7 @@ int main()
 
 		if (cmd == "reg")
 		{
-			//Запрашиваем данные для регистрации
+			//Р—Р°РїСЂР°С€РёРІР°РµРј РґР°РЅРЅС‹Рµ РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё
 			std::string name, pass;
 
 			std::cout << "Enter name" << std::endl;
@@ -31,12 +31,12 @@ int main()
 			std::cout << "Enter password" << std::endl;
 			std::cin >> pass;
 
-			//Создаем запрос, хешируем пароль
+			//РЎРѕР·РґР°РµРј Р·Р°РїСЂРѕСЃ, С…РµС€РёСЂСѓРµРј РїР°СЂРѕР»СЊ
 			std::string answer; std::string query = "cw1//registration.php?name=" + name
 				+ "&pass=" + MD5().operator()(pass);
 			answer = SendGet("bk-usue.space", query.c_str());
 
-			//Выводим ответ
+			//Р’С‹РІРѕРґРёРј РѕС‚РІРµС‚
 			switch (std::stoi(answer))
 			{
 			case 0:
