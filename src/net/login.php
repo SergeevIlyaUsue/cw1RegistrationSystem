@@ -3,7 +3,7 @@
 $name = $_GET['name'];
 $password = $_GET['pass'];
 
-$link = mysql_connect('localhost', 'h134199_usue_cw', 'bk123456')
+$link = mysql_connect('localhost', 'h134199_usue_cw', 'пароль')
         or exit('1');
 
 mysql_select_db('h134199_cwdbms')
